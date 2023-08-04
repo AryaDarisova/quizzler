@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var trueBtn: UIButton!
     @IBOutlet weak var falseBtn: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     var quizBrain = QuizBrain()
     
@@ -30,8 +31,16 @@ class ViewController: UIViewController {
         
         quizBrain.incQuestionNum()
         
-        if quizBrain.isEndOfQuiz() {
+        if !quizBrain.isEndOfQuiz() {
             Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        } else {
+            let alert = UIAlertController(title: "Test completed!", message: "This is your score: \(quizBrain.getScore())/\(quizBrain.getQustionsCount())", preferredStyle: UIAlertController.Style.alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            quizBrain.resetQuiz()
+            updateUI()
         }
     }
     
@@ -40,6 +49,7 @@ class ViewController: UIViewController {
         falseBtn.backgroundColor = UIColor.clear
         questionLabel.text = quizBrain.getQuestionText()
         progressBar.progress = quizBrain.getProgress()
+        scoreLabel.text = "Score: \(quizBrain.getScore())"
     }
 }
 

@@ -21,9 +21,16 @@ struct QuizBrain {
         Question(question: "Цвет сусано Мадары Учихи - синий?", answer: true)
     ]
     var questionNum = 0
+    var score = 0
     
-    func checkAnswer(_ userAnswer: Bool) -> Bool {
-        return userAnswer == quiz[questionNum].answer
+    mutating func checkAnswer(_ userAnswer: Bool) -> Bool {
+        if (userAnswer == quiz[questionNum].answer) {
+            incScore()
+            
+            return true
+        }
+        
+        return false
     }
     
     func getQuestionText() -> String {
@@ -39,6 +46,23 @@ struct QuizBrain {
     }
     
     func isEndOfQuiz() -> Bool {
-        return questionNum < quiz.count
+        return !(questionNum < quiz.count)
+    }
+    
+    private mutating func incScore() {
+        score += 1
+    }
+    
+    func getScore() -> Int {
+        return score
+    }
+    
+    func getQustionsCount() -> Int {
+        return quiz.count
+    }
+    
+    mutating func resetQuiz() {
+        questionNum = 0
+        score = 0
     }
 }

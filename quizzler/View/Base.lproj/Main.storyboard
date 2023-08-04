@@ -88,6 +88,7 @@
                         <outlet property="falseBtn" destination="gB1-39-2KP" id="maa-Ng-dQ9"/>
                         <outlet property="progressBar" destination="TkO-mb-vNd" id="8tB-8H-bCd"/>
                         <outlet property="questionLabel" destination="Jl7-hC-NQn" id="OPS-tc-Hya"/>
+                        <outlet property="scoreLabel" destination="f6m-9f-yuS" id="VXG-9v-Y2e"/>
                         <outlet property="trueBtn" destination="S3G-04-P6d" id="x3m-mA-oJy"/>
                     </connections>
                 </viewController>
