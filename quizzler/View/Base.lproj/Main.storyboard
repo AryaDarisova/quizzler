@@ -19,25 +19,39 @@
                                 <rect key="frame" x="30" y="47" width="368" height="845"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6m-9f-yuS">
-                                        <rect key="frame" x="0.0" y="0.0" width="368" height="58.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="44.333333333333336"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.9137254901960784" green="0.91764705882352937" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl7-hC-NQn">
-                                        <rect key="frame" x="0.0" y="83.333333333333314" width="368" height="516.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="69.333333333333343" width="368" height="455.66666666666663"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                         <color key="textColor" red="0.9137254901960784" green="0.91764705882352937" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3G-04-P6d">
-                                        <rect key="frame" x="0.0" y="625" width="368" height="80"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jb-gR-KqH">
+                                        <rect key="frame" x="0.0" y="550" width="368" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="L1X-0T-Tmw"/>
+                                            <constraint firstAttribute="height" constant="70" id="olg-nn-Lph"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="True" backgroundImage="Rectangle">
+                                        <state key="normal" title="1st answer" backgroundImage="Rectangle">
+                                            <color key="titleColor" red="0.98039215690000003" green="0.81568627449999997" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNE-VN-TVe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3G-04-P6d">
+                                        <rect key="frame" x="0.0" y="645" width="368" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="L1X-0T-Tmw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="2nd answer" backgroundImage="Rectangle">
                                             <color key="titleColor" red="0.98039215686274506" green="0.81568627450980391" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -45,13 +59,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB1-39-2KP">
-                                        <rect key="frame" x="0.0" y="730" width="368" height="80"/>
+                                        <rect key="frame" x="0.0" y="740" width="368" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="SgT-ZA-fBu"/>
+                                            <constraint firstAttribute="height" constant="70" id="SgT-ZA-fBu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="False" backgroundImage="Rectangle">
+                                        <state key="normal" title="3rd answer" backgroundImage="Rectangle">
                                             <color key="titleColor" red="0.98039215686274506" green="0.81568627450980391" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -85,11 +99,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="falseBtn" destination="gB1-39-2KP" id="maa-Ng-dQ9"/>
+                        <outlet property="answer1" destination="2jb-gR-KqH" id="Ozo-Ty-peb"/>
+                        <outlet property="answer2" destination="S3G-04-P6d" id="cCP-NQ-cX0"/>
+                        <outlet property="answer3" destination="gB1-39-2KP" id="maa-Ng-dQ9"/>
                         <outlet property="progressBar" destination="TkO-mb-vNd" id="8tB-8H-bCd"/>
                         <outlet property="questionLabel" destination="Jl7-hC-NQn" id="OPS-tc-Hya"/>
                         <outlet property="scoreLabel" destination="f6m-9f-yuS" id="VXG-9v-Y2e"/>
-                        <outlet property="trueBtn" destination="S3G-04-P6d" id="x3m-mA-oJy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

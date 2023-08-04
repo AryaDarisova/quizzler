@@ -9,8 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var trueBtn: UIButton!
-    @IBOutlet weak var falseBtn: UIButton!
+    @IBOutlet weak var answer1: UIButton!
+    @IBOutlet weak var answer2: UIButton!
+    @IBOutlet weak var answer3: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var scoreLabel: UILabel!
     
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func answerBtnPressed(_ sender: UIButton) {
-        let userAnswer = sender.currentTitle == "True" ? true : false
+        let userAnswer = sender.currentTitle!
         let isCorrect = quizBrain.checkAnswer(userAnswer)
         
         sender.backgroundColor = isCorrect ?
@@ -44,8 +45,14 @@ class ViewController: UIViewController {
             quizBrain.resetQuiz()
         }
         
-        trueBtn.backgroundColor = UIColor.clear
-        falseBtn.backgroundColor = UIColor.clear
+        let answerOptions = quizBrain.getAnswerOptions()
+        
+        answer1.backgroundColor = UIColor.clear
+        answer2.backgroundColor = UIColor.clear
+        answer3.backgroundColor = UIColor.clear
+        answer1.setTitle(answerOptions[0], for: .normal)
+        answer2.setTitle(answerOptions[1], for: .normal)
+        answer3.setTitle(answerOptions[2], for: .normal)
         questionLabel.text = quizBrain.getQuestionText()
         progressBar.progress = quizBrain.getProgress()
         scoreLabel.text = "Score: \(quizBrain.getScore())"
