@@ -36,15 +36,26 @@ class ViewController: UIViewController {
     @IBAction func answerBtnPressed(_ sender: UIButton) {
         let userAnswer = sender.currentTitle == "True" ? true : false
         
+        print("User answer: \(userAnswer) Correct answer: \(quiz[questionNum].answer)")
+        
+        if userAnswer == quiz[questionNum].answer {
+            sender.backgroundColor = UIColor(red: 2/255, green: 137/255, blue: 75/255, alpha: 1.0)
+        } else {
+            sender.backgroundColor = UIColor(red: 223/255, green: 54/255, blue: 45/255, alpha: 1.0)
+        }
+        
         questionNum += 1
         
         if questionNum < quiz.count {
-            updateUI()
+            Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
     }
     
-    func updateUI() {
+    @objc func updateUI() {
+        trueBtn.backgroundColor = UIColor.clear
+        falseBtn.backgroundColor = UIColor.clear
         questionLabel.text = quiz[questionNum].question
+        progressBar.progress = Float(questionNum + 1) / Float(quiz.count)
     }
 }
 

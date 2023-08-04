@@ -52,7 +52,7 @@
                                             <action selector="answerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="04R-YW-ad8"/>
                                         </connections>
                                     </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TkO-mb-vNd">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="TkO-mb-vNd">
                                         <rect key="frame" x="0.0" y="835" width="368" height="11"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="cU2-GI-aPu"/>
